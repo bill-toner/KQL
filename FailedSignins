@@ -1,0 +1,4 @@
+// Failed Signins
+SigninLogs
+| where TimeGenerated > ago(24h)
+| where ResultType !in ("0", "501525", "50140");
